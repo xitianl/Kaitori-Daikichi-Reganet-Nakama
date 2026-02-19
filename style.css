@@ -1292,6 +1292,7 @@ footer {
     font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: bold;
+    color: var(--color-primary);
 }
 
 /* LINE Floating Button */
