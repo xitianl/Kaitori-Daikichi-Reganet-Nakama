@@ -1466,6 +1466,13 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Fix Hero Line Break */
+.hero-title .highlight {
+    font-size: 2.8rem;
+    /* Reduce from 4rem */
+    white-space: nowrap;
+}
+
 .review-text {
     font-size: 0.95rem;
     line-height: 1.8;
