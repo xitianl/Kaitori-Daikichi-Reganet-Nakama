@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>買取事例一覧 | 買取大吉 レガネット中間店</title>
+    <meta name="description" content="買取大吉 レガネット中間店の買取実績一覧詳細。金・ブランド品・時計など、豊富な買取事例を公開中。">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="買取事例一覧 | 買取大吉 レガネット中間店">
+    <meta property="og:description" content="買取大吉 レガネット中間店の買取実績一覧詳細。金・ブランド品・時計など、豊富な買取事例を公開中。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaitori-daikichi-lp.vercel.app/cases-list.html">
+    <meta property="og:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+    <meta property="og:site_name" content="買取大吉 レガネット中間店">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="買取事例一覧 | 買取大吉 レガネット中間店">
+    <meta name="twitter:description" content="買取大吉 レガネット中間店の買取実績一覧詳細。金・ブランド品・時計など、豊富な買取事例を公開中。">
+    <meta name="twitter:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Header spacing fix */
+        /* Header spacing fix - Styles moved to line 337 */
+
+        .cases-grid-container {
+            padding: 40px 0 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            /* Center grid items */
+        }
+
+        @media (min-width: 769px) {
+            .cases-grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* Force 3 cols on desktop */
+                gap: 30px;
+            }
+        }
+
+        /* Force override of style.css fixed width */
+        .cases-grid .case-card {
+            width: 100% !important;
+            max-width: none !important;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .cases-grid .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ensure image box fills width */
+        .cases-grid .case-img-box {
+            height: 200px;
+            /* Default height */
+            overflow: hidden;
+            position: relative;
+            width: 100% !important;
+        }
+
+        @media (max-width: 768px) {
+            .cases-grid .case-img-box {
+                height: 180px;
+                /* Slightly shorter on mobile */
+            }
+        }
+
+        .cases-grid .case-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .cases-grid .case-card:hover .case-img-box img {
+            transform: scale(1.1);
+        }
+
+        /* Fix overlapping text with Flexbox */
+        .cases-grid .case-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .cases-grid .case-title {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .cases-grid .case-meta-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: auto;
+            /* Push to bottom */
+        }
+
+        .cases-grid .case-price {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--color-primary);
+            /* Use variable for consistency */
+            margin: 0;
+        }
+
+        .cases-grid .case-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Filter Buttons Style */
+        .cases-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #555;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: #fff;
+            border-color: var(--color-primary);
+            box-shadow: 0 4px 10px rgba(0, 56, 178, 0.2);
+        }
+
+        /* Force Blue Logo in Header/Footer for this page */
+        .logo-main,
+        .footer .logo-main {
+            color: var(--color-primary) !important;
+        }
+
+        @media (max-width: 768px) {
+            .cases-filter {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                flex-wrap: nowrap;
+                /* Prevent wrapping */
+            }
+
+            .filter-btn {
+                flex-shrink: 0;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp 0.3s;
+            overflow: hidden;
+        }
+
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            z-index: 10;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .modal-gallery {
+            flex: 1;
+            min-width: 300px;
+            background: #f5f5f5;
+        }
+
+        .modal-main-img-box {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .modal-main-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                max-width: none;
+            }
+
+            .modal-main-img-box {
+                height: 300px;
+            }
+
+            .modal-info {
+                padding: 25px;
+            }
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 10px 0;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumbs li {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumbs li:not(:last-child)::after {
+            content: '\003E';
+            /* > symbol */
+            margin: 0 10px;
+            color: #ccc;
+            font-size: 0.8rem;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+
+        /* Enhanced Page Header */
+        .cases-list-header {
+            background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+            margin-top: 20px;
+            /* Adjusted for breadcrumbs */
+            border-bottom: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cases-list-header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+    <!-- JSON-LD Structured Data (Breadcrumb) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "TOP",
+        "item": "https://kaitori-daikichi-lp.vercel.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "買取事例一覧",
+        "item": "https://kaitori-daikichi-lp.vercel.app/cases-list.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header (Simplified) -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <span class="logo-main">買取大吉</span>
+                    <span class="logo-branch">レガネット中間店</span>
+                </a>
+            </h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="index.html#usp">選ばれる理由</a></li>
+                    <li><a href="index.html#items">買取品目</a></li>
+                    <li><a href="index.html#flow">買取の流れ</a></li>
+                    <li><a href="index.html#access">店舗情報</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta sp-none">
+                <a href="tel:07091314381" class="btn-tel">
+                    <i class="fa-solid fa-phone"></i> 070-9131-4381
+                </a>
+            </div>
+            <div class="hamburger sp-only">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div style="padding-top: 100px;"> <!-- Spacer for fixed header -->
+        <div class="container">
+            <nav class="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li>買取事例一覧</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="cases-list-header">
+        <div class="container">
+            <h1 class="section-title">買取事例一覧</h1>
+            <p class="section-desc">これまでの買取実績をご紹介します。</p>
+        </div>
+    </div>
+
+    <!-- Cases Filter -->
+    <div class="container">
+        <div class="cases-filter">
+            <button class="filter-btn active" data-filter="all">すべて</button>
+            <button class="filter-btn" data-filter="金・貴金属">金・貴金属</button>
+            <button class="filter-btn" data-filter="ダイヤ・宝石">ダイヤ・宝石</button>
+            <button class="filter-btn" data-filter="ブランド品">ブランド品</button>
+            <button class="filter-btn" data-filter="時計">時計</button>
+            <button class="filter-btn" data-filter="切手">切手</button>
+            <button class="filter-btn" data-filter="古銭">古銭</button>
+            <button class="filter-btn" data-filter="カメラ">カメラ</button>
+            <button class="filter-btn" data-filter="スマホ・タブレット">スマホ・タブレット</button>
+            <button class="filter-btn" data-filter="テレカ">テレカ</button>
+            <button class="filter-btn" data-filter="楽器">楽器</button>
+            <button class="filter-btn" data-filter="工具">工具</button>
+            <button class="filter-btn" data-filter="お酒">お酒</button>
+            <button class="filter-btn" data-filter="その他">その他</button>
+        </div>
+    </div>
+
+    <!-- Cases Grid -->
+    <div class="cases-grid-container">
+        <div class="cases-grid" id="cases-grid">
+            <!-- JS Injected -->
+        </div>
+
+        <div class="text-center" style="margin-top: 60px;">
+            <a href="index.html" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-left"></i> トップページに戻る
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer removed (Duplicate) -->
+
+    <!-- Loading Screen -->
+    <!-- Loading Screen (Rich Animation) -->
+    <div id="loading-screen">
+        <div class="loading-bg"></div>
+        <div class="curtain curtain-left"></div>
+        <div class="curtain curtain-right"></div>
+        <div class="loading-content">
+            <div class="loading-logo-box">
+                <div class="logo-main" style="font-size: 3rem; justify-content: center; color: var(--color-primary);">
+                    買取大吉</div>
+                <div class="logo-branch" style="font-size: 1.2rem; color: #555; margin-top: 10px;">レガネット中間店</div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('cases-grid');
+            const loadingScreen = document.getElementById('loading-screen'); // Re-use main loader or create local one? 
+            // Better to show a skeleton or just wait. 
+
+            // --- MicroCMS Configuration ---
+            const MICROCMS_SERVICE_ID = 'daikichinakama';
+            const MICROCMS_API_KEY = '8Q7EyRuVjhvLZ0S9AHs5ueadAzU2QzVNxcKS';
+            const MICROCMS_ENDPOINT = 'news';
+            // ---------------------------------------------
+
+            async function fetchCases() {
+                // If keys are not set, return local data immediatey
+                if (MICROCMS_SERVICE_ID === 'YOUR_SERVICE_ID' || MICROCMS_API_KEY === 'YOUR_API_KEY') {
+                    console.log('MicroCMS keys not set. Using local data.');
+                    return typeof casesData !== 'undefined' ? casesData : [];
+                }
+
+                try {
+                    const url = `https://${MICROCMS_SERVICE_ID}.microcms.io/api/v1/${MICROCMS_ENDPOINT}?limit=100`;
+                    const response = await fetch(url, {
+                        headers: {
+                            'X-MICROCMS-API-KEY': MICROCMS_API_KEY
+                        }
+                    });
+                    if (!response.ok) throw new Error('API request failed');
+                    const data = await response.json();
+                    return data.contents;
+                } catch (error) {
+                    console.error('Failed to fetch from MicroCMS:', error);
+                    console.log('Falling back to local data.');
+                    return typeof casesData !== 'undefined' ? casesData : [];
+                }
+            }
+
+            // Get data
+            let allCases = await fetchCases();
+
+            if (allCases.length === 0) {
+                grid.innerHTML = '<p class="text-center" style="width:100%;">現在、買取事例はありません。</p>';
+                return;
+            }
+
+            // Date Sort (Newest first)
+            allCases.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            // Normalize data structure if needed (ensure fields match)
+            // MicroCMS might return fields slightly differently, but we set up ID/names to match.
+            // Standardize image URL: MicroCMS returns an object for image { url, height, ... }
+            allCases = allCases.map(c => ({
+                ...c,
+                mainImage: c.image && c.image.url ? c.image.url : (c.mainImage || 'images/no-image.png'),
+                category: Array.isArray(c.category) ? c.category[0] : c.category // Select returns array sometimes? No, usually string for single select.
+            }));
+
+            const createCardHtml = (c) => `
+                <div class="case-card" onclick="openModal('${c.id}')">
+                    <div class="case-img-box">
+                        <img src="${c.mainImage}" alt="${c.title}" loading="lazy">
+                    </div>
+                    <div class="case-info">
+                        <span class="case-cat">${c.category}</span>
+                        <h3 class="case-title">${c.title}</h3>
+                        <div class="case-meta-bottom">
+                            <div class="case-price">${c.price}</div>
+                            <span class="case-date">${new Date(c.date).toLocaleDateString('ja-JP')}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const renderGrid = (cases) => {
+                grid.innerHTML = cases.map(c => createCardHtml(c)).join('');
+                // If using "fade in" animation for cards, trigger it here
+            };
+
+            // Modal Logic
+            const modal = document.getElementById('case-modal');
+            const closeBtn = document.querySelector('.close-modal');
+
+            window.openModal = (id) => {
+                const caseItem = allCases.find(c => c.id === id);
+                if (!caseItem) return;
+
+                document.getElementById('modal-main-img').src = caseItem.mainImage;
+                document.getElementById('modal-category').innerText = caseItem.category;
+                document.getElementById('modal-title').innerText = caseItem.title;
+                document.getElementById('modal-price').innerText = caseItem.price;
+                document.getElementById('modal-date').innerText = new Date(caseItem.date).toLocaleDateString('ja-JP');
+                document.getElementById('modal-desc').innerText = caseItem.description || "詳細情報はありません。";
+
+                modal.style.display = "block";
+                document.body.style.overflow = "hidden";
+            };
+
+            closeBtn.onclick = () => {
+                modal.style.display = "none";
+                document.body.style.overflow = "";
+            };
+
+            window.onclick = (event) => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = "";
+                }
+            };
+
+            // Initial Render
+            renderGrid(allCases);
+
+            // Filter Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const category = btn.getAttribute('data-filter');
+
+                    if (category === 'all') {
+                        renderGrid(allCases);
+                    } else {
+                        // Filter logic matching the exact category strings from MicroCMS/Static Data
+                        const filtered = allCases.filter(c => c.category === category);
+                        renderGrid(filtered);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-company text-center">
+                <h4>会社概要</h4>
+                <p>株式会社ネオライズ</p>
+                <p>福岡県公安委員会許可 第901022510117号</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 買取大吉 レガネット中間店 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom CTA (Mobile Only) -->
+    <div class="fixed-cta sp-only">
+        <a href="tel:07091314381" class="fixed-btn fixed-btn-tel">
+            <i class="fa-solid fa-phone"></i> 電話相談
+        </a>
+        <a href="reservation.html" class="fixed-btn fixed-btn-web">
+            <i class="fa-solid fa-envelope"></i> Web予約
+        </a>
+    </div>
+
+    <!-- Cases Modal -->
+    <div id="case-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="modal-main-img-box">
+                        <img id="modal-main-img" src="" alt="">
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <span id="modal-category" class="case-cat"></span>
+                    <h3 id="modal-title" class="section-title"
+                        style="font-size: 1.5rem; text-align: left; margin: 10px 0;"></h3>
+                    <div class="case-meta-bottom" style="margin-bottom: 20px;">
+                        <div id="modal-price" class="case-price" style="font-size: 1.8rem;"></div>
+                        <span id="modal-date" class="case-date"></span>
+                    </div>
+                    <p id="modal-desc" style="line-height: 1.8; color: #555;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

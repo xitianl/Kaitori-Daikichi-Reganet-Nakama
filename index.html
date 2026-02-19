@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css?v=3">
+    <!-- JSON-LD for FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "査定だけでもお願いできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、もちろん可能です。査定料は無料ですので、まずはお値段だけでもご確認ください。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "壊れたブランド時計でも売れますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、買取可能です。動かない時計、ガラスが割れている時計でも部品としての価値がある場合がございます。ぜひ一度お見せください。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "出張買取の手数料はかかりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "いいえ、出張料・査定料・キャンセル料など、お客様からいただく手数料は一切ございません。完全無料でご利用いただけます。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "買取に必要なものは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "運転免許証、健康保険証、マイナンバーカードなどの「ご本人様確認書類」が必要です。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "予約は必要ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ご予約なしでも大歓迎です。ただし、混雑時はお待ちいただく場合がございますので、事前にご予約いただくとスムーズです。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "片方だけのピアスや切れたネックレスも売れますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、問題ございません。金やプラチナ製品であれば、壊れていても重さでしっかり査定させていただきます。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "駐車場はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、レガネット中間店の共用駐車場をご利用いただけます。お買い物のついでにお気軽にお立ち寄りください。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "査定金額に納得できない場合は断ってもいいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "もちろんです。査定金額にご納得いただけない場合は、キャンセルしていただいて構いません。その場合も手数料はいただきません。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "未成年の買取は可能ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "申し訳ございませんが、18歳未満（高校生含む）の方からの買取はお断りしております。保護者の方とご同伴をお願いしております。"
+        }
+      }, {
+        "@type": "Question",
+        "name": "古いお金や外国のコインも売れますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、古銭や記念硬貨、海外のコインや紙幣もお買取しております。価値がわからないものも丁寧に査定いたします。"
+        }
+      }]
+    }
+    </script>
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="買取大吉 レガネット中間店 | 高価買取・出張買取">
+    <meta property="og:description"
+        content="福岡県中間市の買取なら「買取大吉 レガネット中間店」。金・プラチナ・ブランド品・時計など、あらゆるお品物を高価買取いたします。出張買取も手数料無料で対応中！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaitori-daikichi-lp.vercel.app/">
+    <meta property="og:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+    <meta property="og:site_name" content="買取大吉 レガネット中間店">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="買取大吉 レガネット中間店 | 高価買取・出張買取">
+    <meta name="twitter:description"
+        content="福岡県中間市の買取なら「買取大吉 レガネット中間店」。金・プラチナ・ブランド品・時計など、あらゆるお品物を高価買取いたします。出張買取も手数料無料で対応中！">
+    <meta name="twitter:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaitori-daikichi-lp.vercel.app/">
+    <meta property="og:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "買取大吉 レガネット中間店",
+      "image": "https://kaitori-daikichi-lp.vercel.app/hero-bg.png",
+      "telephone": "070-9131-4381",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "東中間1-8-8",
+        "addressLocality": "中間市",
+        "addressRegion": "福岡県",
+        "postalCode": "809-0019",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.82111,
+        "longitude": 130.70889
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      "url": "https://kaitori-daikichi-lp.vercel.app/"
+    }
+    </script>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-main">買取大吉</span>
+                    <span class="logo-branch">レガネット中間店</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#philosophy">想い</a></li>
+                    <li><a href="#usp">選ばれる理由</a></li>
+                    <li><a href="#items">買取品目</a></li>
+                    <li><a href="#flow">買取の流れ</a></li>
+                    <li><a href="#access">店舗情報</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="tel:07091314381" class="btn-tel">
+                    <i class="fa-solid fa-phone"></i> 070-9131-4381
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('hero-bg.png');"></div>
+            <div class="hero-slide" style="background-image: url('banner_precious_metals_1771167002656.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('banner_brand_bags_1771167017185.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('ex_watch_rolex_1771164767891.png');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-sub tag-anim">中間市・北九州市の出張買取ならお任せください</p>
+            <h1 class="hero-title tag-anim delay-1">
+                その不用品、<br>
+                <span class="highlight">驚きの高値</span>で<br>
+                買い取ります。
+            </h1>
+            <p class="hero-desc tag-anim delay-2">
+                査定料・出張料・キャンセル料 <span class="text-gold">全て0円</span>。<br>
+                プロの査定士が、あなたの大切なお品物を<br class="sp-only">適正価格で査定します。
+            </p>
+
+            <!-- Trust Badges -->
+            <div class="hero-badges tag-anim delay-2">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-magnifying-glass-dollar"></i> 査定完全無料
+                </div>
+                <div class="hero-badge">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> 即日現金化
+                </div>
+                <div class="hero-badge">
+                    <i class="fa-solid fa-truck"></i> 出張費0円
+                </div>
+            </div>
+            <div class="hero-buttons tag-anim delay-3">
+                <a href="tel:07091314381" class="btn btn-primary btn-lg shine-effect">
+                    <i class="fa-solid fa-phone"></i> お電話で無料相談
+                    <span class="btn-sub">10:00〜19:00 (年中無休)</span>
+                </a>
+                <button onclick="openPreCheckModal()" class="btn btn-secondary shine-effect">
+                    <i class="fa-solid fa-truck"></i> 出張買取のお申し込みはこちら ＞
+                </button>
+            </div>
+            <!-- Future Line integration could go here -->
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Campaign Section -->
+    <section id="campaign" class="section campaign">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">CAMPAIGN</span>
+                <h2 class="section-title">今月のキャンペーン</h2>
+            </div>
+            <div class="campaign-grid">
+                <!-- 1. Large Appliances -->
+                <a href="detail.html?id=appliance" class="campaign-card fade-in-up delay-1"
+                    style="background-image: url('pickup_appliance.png');">
+                    <div class="campaign-overlay">
+                        <div class="campaign-text">
+                            <span class="campaign-sub">大型冷蔵庫・洗濯機</span>
+                            <h3 class="campaign-main"><span class="text-highlight">買取金額</span><br><span
+                                    class="text-big">20% UP!</span></h3>
+                            <span class="campaign-tag">買取強化中</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- 2. Precious Metals -->
+                <a href="detail.html?id=gold" class="campaign-card fade-in-up delay-2"
+                    style="background-image: url('pickup_gold.png');">
+                    <div class="campaign-overlay">
+                        <div class="campaign-text">
+                            <span class="campaign-sub">貴金属10点以上</span>
+                            <h3 class="campaign-main"><span class="text-highlight">同時買取で</span><br><span
+                                    class="text-big">大幅 UP!</span></h3>
+                            <span class="campaign-tag">まとめ売りがお得</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- 3. Brand Bags -->
+                <a href="detail.html?id=brand" class="campaign-card fade-in-up delay-3"
+                    style="background-image: url('pickup_brand.png');">
+                    <div class="campaign-overlay">
+                        <div class="campaign-text">
+                            <span class="campaign-sub">ルイ・ヴィトン etc.</span>
+                            <h3 class="campaign-main"><span class="text-highlight">ブランドバッグ</span><br><span
+                                    class="text-big">買取強化中</span></h3>
+                            <span class="campaign-tag">ボロボロでもOK</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- 4. Whole House -->
+                <a href="detail.html?id=relocation" class="campaign-card fade-in-up delay-4"
+                    style="background-image: url('pickup_relocation.png');">
+                    <div class="campaign-overlay">
+                        <div class="campaign-text">
+                            <span class="campaign-sub">お片付けいたします</span>
+                            <h3 class="campaign-main"><span class="text-highlight">一軒まるごと</span><br><span
+                                    class="text-big">出張買取</span></h3>
+                            <span class="campaign-tag">遺品整理・引越し</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Cases -->
+    <section id="cases" class="section cases bg-light">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">LATEST CASES</span>
+                <h2 class="section-title">最新の買取事例</h2>
+                <p class="section-desc">実際に買取させていただいたお品物の一部をご紹介します。</p>
+            </div>
+
+            <!-- Horizontal Scroll Slider -->
+            <div class="cases-scroll-container fade-in-up delay-1">
+                <div class="cases-track" id="cases-track">
+                    <!-- JS Injected -->
+                </div>
+            </div>
+
+            <div class="text-center mt-4 fade-in-up delay-2">
+                <span class="scroll-hint"><i class="fa-solid fa-arrows-left-right"></i> 横にスクロールしてご覧ください</span>
+            </div>
+
+            <!-- View More Button -->
+            <div class="text-center fade-in-up delay-3" style="margin-top: 30px;">
+                <a href="cases-list.html" class="btn-view-more" style="text-decoration: none;">
+                    もっと見る <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="section philosophy">
+        <div class="container philosophy-container">
+            <div class="philosophy-text fade-in-up">
+                <span class="section-subtitle">OUR PHILOSOPHY</span>
+                <h2 class="section-title">モノと想いを<br>次の誰かへ繋ぐ架け橋に。</h2>
+                <p>
+                    「これ、売れるかな？」「古すぎて恥ずかしい…」<br>
+                    そんなお悩みをお持ちの方こそ、ぜひ一度ご相談ください。<br><br>
+                    私たち買取大吉 レガネット中間店は、単にモノを買い取るだけではありません。<br>
+                    お客様が大切に使われてきたお品物に込められた「想い」も汲み取り、<br>
+                    次に必要としている方へと繋ぐお手伝いをさせていただきます。<br><br>
+                    地域密着、親切・丁寧な対応を心がけ、<br>
+                    「ここに来てよかった」と思っていただける店舗を目指しています。
+                </p>
+            </div>
+            <div class="philosophy-image fade-in-up delay-1 img-zoom-container">
+                <img src="philosophy-new.jpg" alt="出張買取の風景" loading="lazy" class="img-zoom">
+            </div>
+        </div>
+    </section>
+
+    <!-- USP (Reasons to Choose) -->
+    <section id="usp" class="section usp bg-light">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">REASONS</span>
+                <h2 class="section-title">買取大吉が<span class="text-blue">選ばれる5つの理由</span></h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-card fade-in-up delay-1">
+                    <div class="usp-icon">
+                        <i class="fa-solid fa-yen-sign"></i>
+                    </div>
+                    <h3 class="usp-title">業界屈指の高価買取</h3>
+                    <p class="usp-desc">独自の販売ルートと豊富な知識で、他店に負けない高額査定を実現します。</p>
+                </div>
+                <div class="usp-card fade-in-up delay-2">
+                    <div class="usp-icon">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="usp-title">その場で現金払い</h3>
+                    <p class="usp-desc">査定にご納得いただければ、どんな高額でもその場で現金にてお支払いいたします。</p>
+                </div>
+                <div class="usp-card fade-in-up delay-3">
+                    <div class="usp-icon">
+                        <i class="fa-solid fa-house-chimney-user"></i>
+                    </div>
+                    <h3 class="usp-title">安心の出張買取</h3>
+                    <p class="usp-desc">店舗まで行けない・荷物が多い方も安心。プロの査定士がご自宅まで伺います。</p>
+                </div>
+                <div class="usp-card fade-in-up delay-4">
+                    <div class="usp-icon">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                    <h3 class="usp-title">状態が悪くてもOK</h3>
+                    <p class="usp-desc">壊れている、汚れている、デザインが古い…そんなお品物でも大歓迎です。</p>
+                </div>
+                <div class="usp-card fade-in-up delay-5"> <!-- 5th Reason -->
+                    <div class="usp-icon">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="usp-title">手数料・査定料0円</h3>
+                    <p class="usp-desc">出張料や査定料、キャンセル料などは一切かかりません。完全無料でご利用いただけます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Specific Styles for Swiper (Inline temporarily or move to CSS) */
+        .swiper {
+            width: 100%;
+            padding-bottom: 50px;
+            /* Space for pagination */
+        }
+
+        .swiper-slide {
+            height: auto;
+            /* For equal height */
+            /* Flex to align content */
+            display: flex;
+            height: 100%;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--accent-gold);
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--accent-gold);
+        }
+    </style>
+    <section id="reviews" class="section reviews">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">VOICE</span>
+                <h2 class="section-title">お客様の声</h2>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper reviews-swiper fade-in-up delay-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-meta">
+                                <div class="review-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="review-info">
+                                    <span class="review-area">中間市在住 A様</span>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                祖母の遺品整理で利用しました。出張買取をお願いしたところ、すぐに来てくださり助かりました。古い着物やアクセサリーも丁寧に査定していただき、予想以上の金額になりました。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-meta">
+                                <div class="review-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="review-info">
+                                    <span class="review-area">北九州市在住 B様</span>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                ボロボロのブランドバッグを持っていくのが恥ずかしかったのですが、「状態が悪くても大丈夫ですよ」と笑顔で迎えてくれました。金額も納得！また利用したいです。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-meta">
+                                <div class="review-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="review-info">
+                                    <span class="review-area">中間市在住 C様</span>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                初めての買取店で不安でしたが、お店の方がとても話しやすく、査定の根拠もしっかり説明してくれたので安心できました。金のアクセサリーが高く売れて満足です。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-meta">
+                                <div class="review-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="review-info">
+                                    <span class="review-area">遠賀郡在住 D様</span>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                切手と古銭のコレクションを整理したくてお願いしました。一枚一枚丁寧に見ていただき、思った以上の価値がつきました。専門知識が豊富で信頼できるお店です。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-meta">
+                                <div class="review-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="review-info">
+                                    <span class="review-area">八幡西区在住 E様</span>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                出張買取を利用するのは初めてでしたが、女性スタッフの方も同行してくださり安心しました。押し買いのようなことも一切なく、とても丁寧な対応でした。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-meta">
+                                <div class="review-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="review-info">
+                                    <span class="review-area">中間市在住 F様</span>
+                                    <div class="review-stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                壊れた時計や片方だけのピアスなど、捨てようと思っていたものをまとめて買い取っていただきました。家が片付いてお小遣いにもなり、大満足です。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Load Swiper JS at bottom -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <!-- Purchase Items -->
+    <section id="items" class="section items bg-light">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">ITEMS</span>
+                <h2 class="section-title">豊富な買取品目</h2>
+                <p class="section-desc">金・ブランド品・時計をはじめ、様々なお品物を買取いたします。</p>
+            </div>
+            <div class="items-grid">
+                <!-- Set 1 -->
+                <a href="detail.html?id=gold" class="item-card fade-in-up">
+                    <div class="item-icon icon-gold"></div>
+                    <span>金・貴金属</span>
+                </a>
+                <a href="detail.html?id=diamond" class="item-card fade-in-up delay-1">
+                    <div class="item-icon icon-diamond"></div>
+                    <span>ダイヤ・宝石</span>
+                </a>
+                <a href="detail.html?id=brand" class="item-card fade-in-up delay-2">
+                    <div class="item-icon icon-bag"></div>
+                    <span>ブランド品</span>
+                </a>
+                <a href="detail.html?id=watch" class="item-card fade-in-up delay-3">
+                    <div class="item-icon icon-watch"></div>
+                    <span>時計</span>
+                </a>
+
+                <!-- Set 2 -->
+                <a href="detail.html?id=stamp" class="item-card fade-in-up delay-4">
+                    <div class="item-icon icon-stamp"></div>
+                    <span>切手</span>
+                </a>
+                <a href="detail.html?id=coin" class="item-card fade-in-up delay-5">
+                    <div class="item-icon icon-coin"></div>
+                    <span>古銭・記念硬貨</span>
+                </a>
+                <a href="detail.html?id=camera" class="item-card fade-in-up delay-6">
+                    <div class="item-icon icon-camera"></div>
+                    <span>カメラ</span>
+                </a>
+                <a href="detail.html?id=phone" class="item-card fade-in-up delay-7">
+                    <div class="item-icon icon-phone"></div>
+                    <span>スマホ・タブレット</span>
+                </a>
+
+                <!-- Set 3 (New Items) -->
+                <a href="detail.html?id=telecard" class="item-card fade-in-up delay-8">
+                    <div class="item-icon icon-telecard"></div>
+                    <span>テレフォンカード</span>
+                </a>
+                <a href="detail.html?id=instrument" class="item-card fade-in-up delay-9">
+                    <div class="item-icon icon-instrument"></div>
+                    <span>楽器</span>
+                </a>
+                <a href="detail.html?id=tool" class="item-card fade-in-up delay-10">
+                    <div class="item-icon icon-tool"></div>
+                    <span>電動工具</span>
+                </a>
+                <a href="detail.html?id=alcohol" class="item-card fade-in-up delay-11">
+                    <div class="item-icon icon-alcohol"></div>
+                    <span>お酒</span>
+                </a>
+            </div>
+            <div class="text-center mt-4 fade-in-up">
+                <p class="note">※上記以外のお品物も査定可能です。お気軽にお問い合わせください。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow -->
+    <section id="flow" class="section flow">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">FLOW</span>
+                <h2 class="section-title">出張買取の流れ</h2>
+            </div>
+            <div class="flow-steps">
+                <div class="flow-step fade-in-up">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <h3>お問い合わせ</h3>
+                        <p>まずはお電話にて、出張買取をご希望の旨をお伝えください。<br>ご希望の日時を調整いたします。</p>
+                    </div>
+                </div>
+                <div class="flow-step fade-in-up delay-1">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <h3>ご自宅へ訪問・査定</h3>
+                        <p>プロの査定士がご自宅へ伺い、その場でお品物を査定いたします。<br>玄関先での査定も可能です。</p>
+                    </div>
+                </div>
+                <div class="flow-step fade-in-up delay-2">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <h3>査定額の提示</h3>
+                        <p>一点一点の査定金額をご提示します。<br>金額にご納得いただけない場合はキャンセルも可能です。</p>
+                    </div>
+                </div>
+                <div class="flow-step fade-in-up delay-3">
+                    <div class="step-num">04</div>
+                    <div class="step-content">
+                        <h3>現金でお支払い</h3>
+                        <p>その場で現金にてお支払いいたします。<br>※買取成立時には本人確認書類が必要です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area -->
+    <section id="area" class="section area bg-blue">
+        <div class="container">
+            <div class="section-header text-center text-white fade-in-up">
+                <h2 class="section-title">出張対応エリア</h2>
+                <div class="area-box">
+                    <h3>中間市・北九州市を中心に<br class="sp-only">幅広く対応！</h3>
+                    <p>
+                        <strong>中間市全域</strong><br>
+                        <strong>北九州市</strong>（八幡西区・若松区など）<br>
+                        直方市、鞍手郡、遠賀郡など
+                    </p>
+                    <p class="small">※その他の地域もご相談ください。柔軟に対応いたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <span class="section-subtitle">Q&A</span>
+                <h2 class="section-title">よくあるご質問</h2>
+            </div>
+            <div class="faq-list accordion">
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>査定だけでもお願いできますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、もちろん可能です。査定料は無料ですので、まずはお値段だけでもご確認ください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>壊れたブランド時計でも売れますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、買取可能です。動かない時計、ガラスが割れている時計でも部品としての価値がある場合がございます。ぜひ一度お見せください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>出張買取の手数料はかかりますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>いいえ、出張料・査定料・キャンセル料など、お客様からいただく手数料は一切ございません。完全無料でご利用いただけます。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>買取に必要なものは何ですか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>運転免許証、健康保険証、マイナンバーカードなどの「ご本人様確認書類」が必要です。</p>
+                    </div>
+                </div>
+                <!-- New FAQs -->
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>予約は必要ですか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>ご予約なしでも大歓迎です。ただし、混雑時はお待ちいただく場合がございますので、事前にご予約いただくとスムーズです。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>片方だけのピアスや切れたネックレスも売れますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、問題ございません。金やプラチナ製品であれば、壊れていても重さでしっかり査定させていただきます。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>どのようなものを買い取っていますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>金・貴金属、ブランド品、時計、切手、古銭、カメラ、スマホ、楽器、電動工具、お酒など幅広くお買取りしています。「これ売れるかな？」と思うものもお気軽にご相談ください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>未成年でも利用できますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>申し訳ございません。古物営業法の規定により、18歳未満（高校生含む）の方からのお買取りはお断りしております。保護者の方とご同伴、もしくは保護者の方からのお申し込みをお願いいたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>大量にあるのですが出張可能ですか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、大歓迎です。遺品整理や生前整理、お引っ越しに伴うまるごと買取も得意としております。トラックの手配も可能ですので、量に関わらずご相談ください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>駐車場はありますか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、レガネット中間店の共用駐車場をご利用いただけます。お買い物のついでにお気軽にお立ち寄りください。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>査定金額に納得できない場合は断ってもいいですか？</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>もちろんです。査定金額にご納得いただけない場合は、キャンセルしていただいて構いません。その場合も手数料はいただきません。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>未成年の買取は可能ですか？</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>申し訳ございませんが、18歳未満（高校生含む）の方からの買取はお断りしております。保護者の方とご同伴をお願いしております。</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>古いお金や外国のコインも売れますか？</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、古銭や記念硬貨、海外のコインや紙幣もお買取しております。価値がわからないものも丁寧に査定いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access & Contact -->
+    <section id="access" class="section access">
+        <div class="container access-container">
+            <div class="access-info fade-in-up">
+                <h2 class="section-title">店舗情報</h2>
+                <div class="store-details">
+                    <h3>買取大吉 レガネット中間店</h3>
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        〒809-0019 福岡県中間市東中間1-8-8<br>
+                        （西鉄ストア レガネット中間店 敷地内）
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        営業時間：10:00 - 19:00（年中無休）
+                    </p>
+                    <a href="tel:07091314381" class="access-tel">
+                        <i class="fa-solid fa-phone"></i> 070-9131-4381
+                    </a>
+                </div>
+            </div>
+            <div class="access-map fade-in-up delay-1">
+                <!-- Using a generic Google Maps Embed for the address provided -->
+                <!-- Map Container with Overlay -->
+                <div class="map-container" style="position: relative;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4678234857!2d130.70889!3d33.82111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543c8a9a9a9a9a9%3A0x123456789abcdef!2z44CSODA5LTAwMTkg56aP5bKh55yM5Lit6aAcs5biC5p2x5Lit6aAcsADEtOC0OA!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <a href="https://www.google.com/maps/search/?api=1&query=買取大吉+レガネット中間店" target="_blank"
+                        class="map-overlay">
+                        <span class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Googleマップで見る</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <div class="bottom-cta text-center" style="padding: 60px 0; background: #fff5e6;">
+        <div class="container fade-in-up">
+            <h3 style="margin-bottom: 25px; font-size: 1.6rem; color: #d32f2f; font-weight: bold;">出張買取のお申し込み</h3>
+            <p style="margin-bottom: 30px; font-size: 1.1rem;">お電話またはWEBからお気軽にお申し込みください。</p>
+            <div class="hero-cta-secondary" style="display: flex; justify-content: center;">
+                <button onclick="openPreCheckModal()" class="btn btn-secondary btn-cta-bottom">
+                    <i class="fa-solid fa-truck"></i> 出張買取のお申し込みはこちら ＞
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-company text-center fade-in-up">
+                <h4>会社概要</h4>
+                <p>株式会社ネオライズ</p>
+                <p>福岡県公安委員会許可 第901022510117号</p>
+            </div>
+            <div class="footer-bottom fade-in-up delay-1">
+                <p>&copy; 2025 買取大吉 レガネット中間店 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom CTA (Mobile Only) -->
+    <div class="fixed-cta sp-only">
+        <a href="tel:07091314381" class="fixed-btn fixed-btn-tel">
+            <i class="fa-solid fa-phone"></i> 電話相談
+        </a>
+        <a href="reservation.html" class="fixed-btn fixed-btn-web">
+            <i class="fa-solid fa-envelope"></i> Web予約
+        </a>
+    </div>
+
+    <!-- LINE Floating Button (All Devices) -->
+    <a href="https://lin.ee/1fd88DW" target="_blank" class="line-float">
+        <i class="fa-brands fa-line"></i> LINEで査定
+    </a>
+
+
+    <!-- Cases Data removed -->
+
+    <!-- Loading Screen -->
+    <!-- Loading Screen (Rich Animation) -->
+    <div id="loading-screen">
+        <div class="loading-bg"></div>
+        <div class="curtain curtain-left"></div>
+        <div class="curtain curtain-right"></div>
+        <div class="loading-content">
+            <div class="loading-logo-box">
+                <div class="logo-main" style="font-size: 3rem; justify-content: center;">買取大吉</div>
+                <div class="logo-branch" style="font-size: 1.2rem; color: #555; margin-top: 10px;">レガネット中間店</div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Pre-check Modal -->
+    <div id="preCheckModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closePreCheckModal()">&times;</span>
+            <h3 class="modal-title">出張買取のお申し込み</h3>
+            <p class="modal-text" style="font-size: 1.1rem; margin: 20px 0;">買取希望のお品物は<br><strong>3点以上</strong>ですか？</p>
+            <div class="modal-buttons" style="display: flex; gap: 15px; justify-content: center;">
+                <button onclick="location.href='reservation.html'" class="btn btn-primary"
+                    style="min-width: 100px;">はい</button>
+                <button onclick="alert('3点未満でも対応できる場合がございます。お電話にてご相談ください。\n電話：070-9131-4381')" class="btn"
+                    style="min-width: 100px; background: #ccc; color: #333;">いいえ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+
+</body>
+
+</html>

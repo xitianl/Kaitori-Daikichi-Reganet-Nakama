@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出張買取お申し込み | 買取大吉 レガネット中間店</title>
+    <meta name="description" content="出張買取のお申し込みはこちら。手数料無料、最短即日対応。フォームから簡単3分で予約可能です。">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="出張買取お申し込み | 買取大吉 レガネット中間店">
+    <meta property="og:description" content="出張買取のお申し込みはこちら。手数料無料、最短即日対応。フォームから簡単3分で予約可能です。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaitori-daikichi-lp.vercel.app/reservation.html">
+    <meta property="og:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+    <meta property="og:site_name" content="買取大吉 レガネット中間店">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="出張買取お申し込み | 買取大吉 レガネット中間店">
+    <meta name="twitter:description" content="出張買取のお申し込みはこちら。手数料無料、最短即日対応。フォームから簡単3分で予約可能です。">
+    <meta name="twitter:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <style>
+        /* Premium Form Styles */
+        :root {
+            --color-primary: #0056b3;
+            --accent-gold: #ffd700;
+            --primary-blue: #0056b3;
+            /* Compatibility */
+        }
+
+        body {
+            background-color: #fdfbf7;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 160px auto 80px;
+            /* Increased from 120px to avoid header overlap */
+            padding: 50px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--color-primary), var(--accent-gold));
+        }
+
+        h1 {
+            font-family: 'Zen Old Mincho', serif;
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Enhanced Step Indicator */
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 0;
+            transform: translateY(-50%);
+        }
+
+
+
+        /* Darker placeholder for visibility */
+        ::placeholder {
+            color: #888;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        .step {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #666;
+            /* Darkened from #999 */
+            z-index: 1;
+            position: relative;
+            transition: all 0.3s;
+            font-family: 'Zen Old Mincho', serif;
+        }
+
+        .step.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: #fff;
+            box-shadow: 0 0 0 5px rgba(0, 56, 178, 0.1);
+        }
+
+        .step.completed {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: #fff;
+        }
+
+        /* Form Fields */
+        .form-label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: #fafafa;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(0, 56, 178, 0.1);
+            background: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* Validation Styles */
+        .form-input.error,
+        .form-select.error {
+            border-color: #e74c3c;
+            background: #fff6f6;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-input.error+.error-message,
+        .form-select.error+.error-message {
+            display: block;
+            animation: slideDown 0.3s;
+        }
+
+        /* Item Grid */
+        .item-category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .item-category-label {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #fff;
+            font-weight: 500;
+            color: #555;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .item-category-label:hover {
+            border-color: var(--color-primary);
+            background: #f0f7ff;
+            transform: translateY(-2px);
+        }
+
+        .item-category-input:checked+.item-category-label {
+            background: var(--color-primary);
+            color: #fff;
+            border-color: var(--color-primary);
+            box-shadow: 0 4px 10px rgba(0, 56, 178, 0.2);
+        }
+
+        /* Buttons */
+        .btn-group {
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s;
+            min-width: 140px;
+        }
+
+        .btn-primary {
+            background: #0056b3;
+            /* Solid hex fallback */
+            background: linear-gradient(135deg, var(--color-primary), #002a80);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 56, 178, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 56, 178, 0.4);
+        }
+
+        .btn-prev {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .btn-prev:hover {
+            background: #e0e0e0;
+            color: #444;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 100px 15px 100px;
+                padding: 30px 20px;
+            }
+
+            .step-indicator {
+                padding: 0;
+            }
+
+            .step {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        /* Real-time Validation & Success Styles */
+        .form-input.success,
+        .form-select.success {
+            border-color: #2ecc71;
+            background-color: #f0fff4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232ecc71'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+        }
+    </style>
+    <!-- JSON-LD Structured Data (Breadcrumb) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "TOP",
+        "item": "https://kaitori-daikichi-lp.vercel.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "出張買取お申し込み",
+        "item": "https://kaitori-daikichi-lp.vercel.app/reservation.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-main text-gold">買取大吉</span>
+                    <span class="logo-branch">レガネット中間店</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h1 class="text-center mb-4">出張買取お申し込み</h1>
+
+            <div class="step-indicator">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+                <div class="step">4</div>
+                <div class="step">5</div>
+            </div>
+
+            <form id="reservationForm" action="https://formspree.io/f/mykdppdj" method="POST" onsubmit="return false;"
+                class="h-adr">
+                <span class="p-country-name" style="display:none;">Japan</span>
+                <input type="hidden" name="_subject" value="【買取大吉】出張買取のお申し込みがありました">
+
+                <!-- STEP 1: Address -->
+                <div class="form-step active" id="step1">
+                    <h2 class="mb-4">1. 訪問先ご住所</h2>
+                    <div class="form-group">
+                        <label class="form-label">郵便番号 <span style="color:red">*</span></label>
+                        <input type="text" class="form-input p-postal-code" name="zip" placeholder="例: 809-0000"
+                            style="width: 150px;">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">都道府県 <span style="color:red">*</span></label>
+                        <select class="form-select p-region" name="prefecture">
+                            <option value="福岡県">福岡県</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">市区町村・番地 <span style="color:red">*</span></label>
+                        <input type="text" class="form-input p-locality p-street-address" name="address1"
+                            placeholder="例: 中間市〇〇 1-2-3">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">建物名・部屋番号</label>
+                        <input type="text" class="form-input p-extended-address" name="address2"
+                            placeholder="例: 大吉マンション 101">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">駐車スペースはありますか？</label>
+                        <div>
+                            <label style="margin-right: 20px;"><input type="radio" name="parking" value="あり" checked>
+                                あり</label>
+                            <label><input type="radio" name="parking" value="なし"> なし（近隣パーキング）</label>
+                        </div>
+                    </div>
+                    <div class="btn-group" style="justify-content: flex-end;">
+                        <button type="button" class="btn btn-primary" onclick="nextStep(2)">次へ</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Item Info -->
+                <div class="form-step" id="step2">
+                    <h2 class="mb-4">2. お品物情報</h2>
+                    <div class="form-group">
+                        <label class="form-label">買取希望品目（複数選択可）</label>
+                        <div class="item-category-grid">
+                            <label><input type="checkbox" name="items" value="金・貴金属"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">金・貴金属</div>
+                            </label>
+                            <label><input type="checkbox" name="items" value="ダイヤ・宝石"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">ダイヤ</div>
+                            </label>
+                            <label><input type="checkbox" name="items" value="ブランド品"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">ブランド</div>
+                            </label>
+                            <label><input type="checkbox" name="items" value="時計"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">時計</div>
+                            </label>
+                            <label><input type="checkbox" name="items" value="切手"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">切手</div>
+                            </label>
+                            <label><input type="checkbox" name="items" value="カメラ"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">カメラ</div>
+                            </label>
+                            <label><input type="checkbox" name="items" value="他"
+                                    class="hidden-input item-category-input">
+                                <div class="item-category-label">その他</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">大体の点数</label>
+                        <select class="form-select" name="quantity">
+                            <option value="3〜5点">3〜5点</option>
+                            <option value="6〜10点">6〜10点</option>
+                            <option value="11点以上">11点以上</option>
+                            <option value="大量整理（遺品整理など）">大量整理（遺品整理など）</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">お品物の写真（任意）</label>
+                        <input type="file" class="form-input" accept="image/*">
+                        <p style="font-size: 0.8rem; color: #888;">事前に拝見できると査定がスムーズです。</p>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-prev" onclick="prevStep(1)">戻る</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(3)">次へ</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Customer Info -->
+                <div class="form-step" id="step3">
+                    <h2 class="mb-4">3. お客様情報</h2>
+                    <div class="form-group">
+                        <label class="form-label">お名前（漢字） <span style="color:red">*</span></label>
+                        <input type="text" class="form-input" name="name" placeholder="山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">お名前（フリガナ） <span style="color:red">*</span></label>
+                        <input type="text" class="form-input" name="kana" placeholder="ヤマダ タロウ">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">電話番号 <span style="color:red">*</span></label>
+                        <input type="tel" class="form-input" name="tel" placeholder="090-1234-5678">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス</label>
+                        <input type="email" class="form-input" name="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">訪問希望日時</label>
+                        <input type="datetime-local" class="form-input" name="visit_date">
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-prev" onclick="prevStep(2)">戻る</button>
+                        <button type="button" class="btn btn-primary" onclick="showConfirm()">確認画面へ</button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Confirm -->
+                <div class="form-step" id="step4">
+                    <h2 class="mb-4">4. 入力内容の確認</h2>
+                    <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <p><strong>ご住所:</strong> <span id="conf-address"></span></p>
+                        <p><strong>駐車場:</strong> <span id="conf-parking"></span></p>
+                        <p><strong>品目:</strong> <span id="conf-items"></span></p>
+                        <p><strong>点数:</strong> <span id="conf-qty"></span></p>
+                        <p><strong>お名前:</strong> <span id="conf-name"></span></p>
+                        <p><strong>電話番号:</strong> <span id="conf-tel"></span></p>
+                        <p><strong>希望日時:</strong> <span id="conf-date"></span></p>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-prev" onclick="prevStep(3)">戻る</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">送信する</button>
+                    </div>
+                </div>
+
+                <!-- STEP 5: Complete -->
+                <div class="form-step" id="step5">
+                    <div class="text-center" style="padding: 40px 0;">
+                        <i class="fa-regular fa-circle-check"
+                            style="font-size: 5rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+                        <h2 class="mb-4">お申し込み完了</h2>
+                        <p>出張買取のお申し込みありがとうございます。<br>担当者より折り返し確認のご連絡をさせていただきます。</p>
+                        <a href="index.html" class="btn btn-primary mt-4">トップページへ戻る</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+
+        function updateSteps() {
+            document.querySelectorAll('.step').forEach((el, index) => {
+                const stepNum = index + 1;
+                el.classList.remove('active', 'completed');
+                if (stepNum === currentStep) el.classList.add('active');
+                if (stepNum < currentStep) el.classList.add('completed');
+            });
+            document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+            document.getElementById(`step${currentStep}`).classList.add('active');
+
+            // Smooth scroll to top of form
+            const formContainer = document.querySelector('.form-container');
+            if (formContainer) {
+                const headerHeight = 80; // approximate
+                window.scrollTo({
+                    top: formContainer.offsetTop - headerHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function validateInput(input) {
+            const name = input.name;
+            const val = input.value.trim();
+            let isValid = true;
+            let msg = '';
+
+            // Clear existing status
+            input.classList.remove('error', 'success');
+            const parent = input.closest('.form-group');
+            if (parent) {
+                const existingMsg = parent.querySelector('.error-message');
+                if (existingMsg) existingMsg.remove();
+            }
+
+            // Rules
+            if (name === 'zip') {
+                if (!val) { isValid = false; msg = '郵便番号を入力してください'; }
+                else if (!/^\d{3}-?\d{4}$/.test(val)) { isValid = false; msg = '正しい郵便番号形式で入力してください'; }
+            } else if (name === 'address1' || name === 'name' || name === 'kana') {
+                if (!val) { isValid = false; msg = '必須項目です'; }
+            } else if (name === 'tel') {
+                if (!val) { isValid = false; msg = '電話番号を入力してください'; }
+                else if (!/^[\d-]{10,13}$/.test(val)) { isValid = false; msg = '正しい電話番号形式で入力してください'; }
+            }
+
+            // Provide Feedback
+            if (!isValid) {
+                input.classList.add('error');
+                const msgEl = document.createElement('div');
+                msgEl.className = 'error-message';
+                msgEl.textContent = msg;
+                if (parent) parent.appendChild(msgEl);
+            } else if (val) {
+                // Only mark success if not empty
+                input.classList.add('success');
+            }
+
+            return isValid;
+        }
+
+        // Attach Real-time Listeners
+        document.querySelectorAll('.form-input, .form-select').forEach(input => {
+            input.addEventListener('blur', () => validateInput(input));
+            input.addEventListener('input', () => {
+                // Remove error as soon as user starts typing to fix it
+                if (input.classList.contains('error')) {
+                    input.classList.remove('error');
+                    const parent = input.closest('.form-group');
+                    if (parent) {
+                        const existingMsg = parent.querySelector('.error-message');
+                        if (existingMsg) existingMsg.remove();
+                    }
+                }
+            });
+        });
+
+        // Add support for YubinBango auto-fill triggering validation/success
+        document.querySelector('input[name="zip"]').addEventListener('keyup', function () {
+            if (this.value.length >= 7) {
+                // Small delay to allow YubinBango to fill address, then validate address
+                setTimeout(() => {
+                    const addr1 = document.querySelector('input[name="address1"]');
+                    const region = document.querySelector('select[name="prefecture"]');
+                    if (addr1.value) validateInput(addr1);
+                    if (region.value) validateInput(region);
+                }, 500);
+            }
+        });
+
+
+        function validateStep(step) {
+            let isValid = true;
+            const currentStepEl = document.getElementById(`step${step}`);
+
+            // Validate all inputs in current step
+            const inputs = currentStepEl.querySelectorAll('.form-input, .form-select');
+            inputs.forEach(input => {
+                // Skip optional fields from strict validation logic if needed, 
+                // but our validateInput handles specific fields.
+                // For items checkbox (special case)
+                if (input.type !== 'checkbox' && input.type !== 'file' && input.name !== 'address2' && input.name !== 'email' && input.name !== 'visit_date') {
+                    if (!validateInput(input)) isValid = false;
+                }
+            });
+
+            // Special Check for Step 2 (Checkboxes)
+            if (step === 2) {
+                const checkedItems = currentStepEl.querySelectorAll('input[name="items"]:checked');
+                const grid = currentStepEl.querySelector('.item-category-grid');
+
+                // Clear existing error
+                const existingMsg = grid.parentNode.querySelector('.error-message');
+                if (existingMsg) existingMsg.remove();
+
+                if (checkedItems.length === 0) {
+                    const msg = document.createElement('div');
+                    msg.className = 'error-message';
+                    msg.textContent = '少なくとも1つの品目を選択してください';
+                    msg.style.marginTop = '10px';
+                    msg.style.display = 'block'; // Ensure it shows
+                    grid.parentNode.appendChild(msg);
+                    isValid = false;
+                }
+            }
+
+            return isValid;
+        }
+
+        function nextStep(step) {
+            // Validate current step before proceeding
+            if (step > currentStep) {
+                if (!validateStep(currentStep)) return;
+            }
+            currentStep = step;
+            updateSteps();
+        }
+
+        function prevStep(step) {
+            currentStep = step;
+            updateSteps();
+        }
+
+        function showConfirm() {
+            if (!validateStep(3)) return;
+
+            // Populate confirmation data
+            const form = document.getElementById('reservationForm');
+            const data = new FormData(form);
+
+            document.getElementById('conf-address').textContent =
+                `〒${data.get('zip')} ${data.get('prefecture')} ${data.get('address1')} ${data.get('address2')}`;
+            document.getElementById('conf-parking').textContent = data.get('parking');
+
+            const items = [];
+            document.querySelectorAll('input[name="items"]:checked').forEach(el => items.push(el.value));
+            document.getElementById('conf-items').textContent = items.join(', ');
+
+            document.getElementById('conf-qty').textContent = data.get('quantity');
+            document.getElementById('conf-name').textContent = `${data.get('name')} (${data.get('kana')})`;
+            document.getElementById('conf-tel').textContent = data.get('tel');
+            document.getElementById('conf-date').textContent = data.get('visit_date') ? data.get('visit_date').replace('T', ' ') : '日時指定なし';
+
+            nextStep(4);
+        }
+
+        function submitForm() {
+            const form = document.getElementById('reservationForm');
+            const btn = document.querySelector('#step4 .btn-primary');
+            const originalText = btn.textContent;
+
+            // Validate again just in case
+            if (!validateStep(3)) return;
+
+            btn.textContent = '送信中...';
+            btn.disabled = true;
+
+            const data = new FormData(form);
+            const action = form.getAttribute('action');
+
+            fetch(action, {
+                method: form.getAttribute('method'),
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Success
+                    nextStep(5);
+                    form.reset();
+                } else {
+                    return response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert('送信に失敗しました。時間をおいて再度お試しください。');
+                        }
+                    });
+                }
+            }).catch(error => {
+                alert('送信エラーが発生しました。インターネット接続をご確認ください。');
+            }).finally(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            });
+        }
+        // Handle Enter key for navigation
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent accidental submission
+
+                // If in textarea, allow new line (if applicable, currently none)
+                if (event.target.tagName === 'TEXTAREA') return;
+
+                // Determine action based on current step
+                if (currentStep === 1) nextStep(2);
+                else if (currentStep === 2) nextStep(3);
+                else if (currentStep === 3) showConfirm();
+                else if (currentStep === 4) submitForm();
+            }
+        });
+    </script>
+    <!-- Fixed Bottom CTA (Mobile Only) -->
+    <div class="fixed-cta sp-only">
+        <a href="tel:07091314381" class="fixed-btn fixed-btn-tel">
+            <i class="fa-solid fa-phone"></i> 電話相談
+        </a>
+        <a href="reservation.html" class="fixed-btn fixed-btn-web">
+            <i class="fa-solid fa-envelope"></i> Web予約
+        </a>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <span class="loader-text">買取大吉</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>買取品目詳細 | 買取大吉 レガネット中間店</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Meta & OGP -->
+    <meta name="description" content="買取大吉 レガネット中間店の買取品目詳細ページです。">
+    <meta property="og:title" content="買取品目詳細 | 買取大吉 レガネット中間店">
+    <meta property="og:description" content="買取大吉 レガネット中間店の買取品目詳細ページです。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaitori-daikichi-lp.vercel.app/detail.html">
+    <meta property="og:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+    <meta property="og:site_name" content="買取大吉 レガネット中間店">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="買取品目詳細 | 買取大吉 レガネット中間店">
+    <meta name="twitter:description" content="買取大吉 レガネット中間店の買取品目詳細ページです。">
+    <meta name="twitter:image" content="https://kaitori-daikichi-lp.vercel.app/hero-bg.png">
+
+
+    <style>
+        .detail-hero {
+            height: 40vh;
+            min-height: 300px;
+            /* Default background fallback */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.png') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            margin-top: var(--header-height);
+            transition: background 0.5s ease;
+        }
+
+        .detail-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .detail-intro {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 2;
+        }
+
+        .detail-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .detail-h2 {
+            border-left: 5px solid var(--primary-blue);
+            padding-left: 15px;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            font-family: var(--font-heading);
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .check-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .example-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .example-tag {
+            background: var(--bg-light);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            border: 1px solid #ddd;
+        }
+
+        .back-btn-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #eee;
+            color: #333;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #ddd;
+        }
+
+        .detail-icon-wrapper {
+            margin-bottom: 20px;
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Same as Index) -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-main">買取大吉</span>
+                    <span class="logo-branch">レガネット中間店</span>
+                </a>
+            </div>
+            <div class="header-cta">
+                <a href="tel:07091314381" class="btn-tel">
+                    <i class="fa-solid fa-phone"></i> 070-9131-4381
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Detail Content -->
+    <div id="detail-content">
+        <!-- Hero -->
+        <section class="detail-hero">
+            <div class="text-center">
+                <h1 id="d-title">...</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <p id="d-intro" class="detail-intro">...</p>
+
+                <!-- Campaign Block (Dynamic) -->
+                <div id="campaign-block" class="detail-section fade-in-up"
+                    style="display: none; background: linear-gradient(135deg, #fff5f5 0%, #fff 100%); border: 2px solid #ff5252; position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: -10px; right: -10px; background: #ff5252; color: #fff; padding: 20px 40px; transform: rotate(15deg); font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                        CAMPAIGN</div>
+                    <h2 id="c-title" class="detail-h2"
+                        style="color: #d32f2f; border-left-color: #d32f2f; font-size: 1.8rem;"></h2>
+                    <p id="c-sub" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #333;"></p>
+                    <p id="c-desc" style="line-height: 1.8;"></p>
+                </div>
+
+                <div class="detail-section fade-in-up">
+                    <h2 class="detail-h2">お買取実績・取扱例</h2>
+                    <div class="example-list" id="d-examples">
+                        <!-- JS injected -->
+                    </div>
+                </div>
+
+                <div class="detail-section fade-in-up delay-1">
+                    <h2 class="detail-h2">こんな状態でもOK！</h2>
+                    <p class="mb-4">「古くなった」「壊れている」...そんなお品物も喜んで査定いたします。</p>
+                    <ul class="check-list" id="d-conditions">
+                        <!-- JS injected -->
+                    </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="detail-section text-center fade-in-up delay-2"
+                    style="background: #fff5e6; padding: 40px 20px; border-radius: 12px; margin-top: 40px;">
+                    <h2 class="detail-h2"
+                        style="border-left: none; color: #d32f2f; font-weight: bold; margin-bottom: 10px;">出張買取のお申し込み
+                    </h2>
+                    <p class="mb-4" style="font-size: 1.1rem;">査定料・出張料は完全無料です。<br>お気軽にご相談ください。</p>
+                    <div class="hero-cta-secondary" style="display: flex; justify-content: center;">
+                        <button onclick="openPreCheckModal()" class="btn btn-secondary btn-cta-bottom">
+                            <i class="fa-solid fa-truck"></i> 出張買取のお申し込みはこちら ＞
+                        </button>
+                    </div>
+                </div>
+
+                <div class="back-btn-container">
+                    <a href="index.html#items" class="btn-back">
+                        <i class="fa-solid fa-arrow-left"></i> 一覧に戻る
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 買取大吉 レガネット中間店 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <!-- Loading Screen (Rich Animation) -->
+    <div id="loading-screen">
+        <div class="loading-bg"></div>
+        <div class="curtain curtain-left"></div>
+        <div class="curtain curtain-right"></div>
+        <div class="loading-content">
+            <div class="loading-logo-box">
+                <div class="logo-main" style="font-size: 3rem; justify-content: center;">買取大吉</div>
+                <div class="logo-branch" style="font-size: 1.2rem; color: #555; margin-top: 10px;">レガネット中間店</div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-check Modal -->
+    <div id="preCheckModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closePreCheckModal()">&times;</span>
+            <h3 class="modal-title">出張買取のお申し込み</h3>
+            <p class="modal-text" style="font-size: 1.1rem; margin: 20px 0;">買取希望のお品物は<br><strong>3点以上</strong>ですか？</p>
+            <div class="modal-buttons" style="display: flex; gap: 15px; justify-content: center;">
+                <button onclick="location.href='reservation.html'" class="btn btn-primary"
+                    style="min-width: 100px;">はい</button>
+                <button onclick="alert('3点未満でも対応できる場合がございます。お電話にてご相談ください。\n電話：070-9131-4381')" class="btn"
+                    style="min-width: 100px; background: #ccc; color: #333;">いいえ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="items-data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const itemId = params.get('id');
+
+            console.log('Detail Loaded. Item ID:', itemId);
+
+            if (!itemId || !itemData[itemId]) {
+                console.warn('Invalid Item ID');
+                window.location.href = 'index.html'; // Redirect if invalid
+                return;
+            }
+
+            const data = itemData[itemId];
+            console.log('Item Data:', data);
+
+            // Populate Data
+            const pageTitle = `${data.title}の高価買取 | 買取大吉 レガネット中間店`;
+            document.title = pageTitle;
+            document.getElementById('d-title').textContent = data.title;
+            document.getElementById('d-intro').textContent = data.intro;
+
+            // Campaign Info Logic
+            const campaignBlock = document.getElementById('campaign-block');
+            if (data.campaignInfo) {
+                campaignBlock.style.display = 'block';
+                document.getElementById('c-title').textContent = data.campaignInfo.title;
+                document.getElementById('c-sub').textContent = data.campaignInfo.sub;
+                document.getElementById('c-desc').textContent = data.campaignInfo.description;
+            } else {
+                campaignBlock.style.display = 'none';
+            }
+
+            // Dynamic SEO Meta Tags
+            const metaDescription = `${data.intro} 福岡県中間市で${data.title}の高価買取なら買取大吉 レガネット中間店へ。出張買取も手数料無料で対応中！`;
+            document.querySelector('meta[name="description"]').setAttribute('content', metaDescription);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', pageTitle);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', metaDescription);
+            document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
+
+            // Set Background Image dynamically
+            if (data.bgImage) {
+                const heroEl = document.querySelector('.detail-hero');
+                if (heroEl) {
+                    const bgUrl = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${data.bgImage}')`;
+                    console.log('Setting background to:', bgUrl);
+
+                    // Set both shorthand and specific properties to ensure application
+                    heroEl.style.backgroundImage = bgUrl;
+                    heroEl.style.backgroundSize = 'cover';
+                    heroEl.style.backgroundPosition = 'center';
+                }
+            } else {
+                console.log('No bgImage defined for this item.');
+            }
+
+            // Examples
+            const exContainer = document.getElementById('d-examples');
+            data.examples.forEach(ex => {
+                const span = document.createElement('span');
+                span.className = 'example-tag';
+                span.textContent = ex;
+                exContainer.appendChild(span);
+            });
+
+            // Conditions
+            const condContainer = document.getElementById('d-conditions');
+            data.conditions.forEach(cond => {
+                const li = document.createElement('li');
+                li.textContent = cond;
+                condContainer.appendChild(li);
+            });
+
+            // Animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            // Dynamic JSON-LD
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "買取サービス",
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "買取大吉 レガネット中間店",
+                    "telephone": "+81-70-9131-4381",
+                    "priceRange": "￥0～"
+                },
+                "areaServed": "福岡県中間市",
+                "name": `${data.title}の買取`,
+                "description": metaDescription
+            };
+
+            const breadcrumbData = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "TOP",
+                    "item": "https://kaitori-daikichi-lp.vercel.app/"
+                }, {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "買取品目",
+                    "item": "https://kaitori-daikichi-lp.vercel.app/index.html#items"
+                }, {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": data.title,
+                    "item": window.location.href
+                }]
+            };
+
+            const script1 = document.createElement('script');
+            script1.type = 'application/ld+json';
+            script1.text = JSON.stringify(schemaData);
+            document.head.appendChild(script1);
+
+            const script2 = document.createElement('script');
+            script2.type = 'application/ld+json';
+            script2.text = JSON.stringify(breadcrumbData);
+            document.head.appendChild(script2);
+
+        });
+    </script>
+    <!-- Fixed Bottom CTA (Mobile Only) -->
+    <div class="fixed-cta sp-only">
+        <a href="tel:07091314381" class="fixed-btn fixed-btn-tel">
+            <i class="fa-solid fa-phone"></i> 電話相談
+        </a>
+        <a href="reservation.html" class="fixed-btn fixed-btn-web">
+            <i class="fa-solid fa-envelope"></i> Web予約
+        </a>
+    </div>
+
+</body>
+
+</html>
