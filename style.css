@@ -298,7 +298,7 @@ header {
 }
 
 .logo-main {
-    height: 40px;
+    height: 60px;
     font-family: 'Zen Old Mincho', serif;
     /* Change font */
     color: var(--color-primary);
@@ -561,7 +561,7 @@ header {
 
 .scroll-line {
     width: 1px;
-    height: 40px;
+    height: 60px;
     background: #fff;
     margin-top: 10px;
 }
@@ -990,7 +990,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     width: 30px;
-    height: 30px;
+    height: 45px;
     background: var(--color-primary);
     color: #fff;
     border-radius: 50%;
@@ -1051,7 +1051,7 @@ footer {
     left: 20px;
     top: 20px;
     width: 30px;
-    height: 30px;
+    height: 45px;
     background: #ff5252;
     /* Red for Answer */
     color: #fff;
@@ -2237,5 +2237,18 @@ footer {
     /* Revert to 16px if screen is TINY */
     .hero-title {
         font-size: 1.8rem !important;
+    }
+}
+
+/* Top Banner Logo */
+.header .logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+}
+@media (max-width: 768px) {
+    .header .logo-img {
+        height: 45px;
     }
 }
